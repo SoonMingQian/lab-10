@@ -15,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        {/* nV Br from bootstrap */}
         <Navbar bg="dark" data-bs-theme="dark">
           <Container>
             <Navbar.Brand href="/">Navbar</Navbar.Brand>
@@ -25,6 +26,7 @@ function App() {
             </Nav>
           </Container>
         </Navbar>
+        {/* routes connect to other function */}
         <Routes>
           <Route path="create" element={<Create></Create>}></Route>
           <Route path="/" element={<Content></Content>}></Route>

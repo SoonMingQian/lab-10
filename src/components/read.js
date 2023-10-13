@@ -36,11 +36,10 @@ function Read() {
         }
     ]
 
-
     return (
         <div>
             <h2>Hello from my read components</h2>
-            <Books></Books>
+            <Books myBooks={data}></Books>
         </div>
     );
 }

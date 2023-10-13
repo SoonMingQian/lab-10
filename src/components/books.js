@@ -1,7 +1,9 @@
-function Books(){
+function Books(props){
 
     return(
-        <div>Hello from Books components</div>
+        <div>Hello from Books components
+        {console.log(props.myBooks)}
+        </div>
     );
 }
 
