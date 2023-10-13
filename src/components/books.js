@@ -1,9 +1,11 @@
+import BookItem from "./bookItems";
+
 function Books(props){
 
-    return(
-        <div>Hello from Books components
-        {console.log(props.myBooks)}
-        </div>
+    return props.myBooks.map(
+        (book)=>{
+            return <BookItem myBook={book}></BookItem>
+        }
     );
 }
 
