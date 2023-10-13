@@ -8,6 +8,8 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Content from './components/content';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Create from './components/create';
+import Read from './components/read';
 
 function App() {
   return (
@@ -24,9 +26,9 @@ function App() {
           </Container>
         </Navbar>
         <Routes>
-          <Route path="create" element={<Header></Header>}></Route>
+          <Route path="create" element={<Create></Create>}></Route>
           <Route path="/" element={<Content></Content>}></Route>
-          <Route path="read" element={<Footer></Footer>}></Route>
+          <Route path="read" element={<Read></Read>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
