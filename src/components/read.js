@@ -1,7 +1,7 @@
 import Books from "./books";
 
 function Read() {
-
+    //sample book data
     const data = [
         {
             "title": "Learn Git in a Month of Lunches",
