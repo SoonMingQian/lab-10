@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
 
+//takes myBook as prop and renders book information using Bootstrap card
 function BookItem(props) {
 
     return (
