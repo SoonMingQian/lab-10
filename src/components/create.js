@@ -1,13 +1,16 @@
 import { useState } from "react";
 function Create() {
 
+    // Define state variables for title, author, and cover
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [cover, setCover] = useState("");
 
+    // Define the form submission handler
     const handleSubmit = (e)=>{
-        e.preventDefault()
+        e.preventDefault() // Prevent the default form submission behavior
 
+         // Log the values of title, cover, and author to the console
         console.log("Title: "+title+ " Cover: "+cover+" Author: "+author);
     }
     return (
