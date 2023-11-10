@@ -14,11 +14,15 @@ function Create() {
          // Log the values of title, cover, and author to the console
         console.log("Title: "+title+ " Cover: "+cover+" Author: "+author);
 
+
+        //create a book object 
         const book = ({
             title:title,
             cover:cover,
             author:author,
         })
+
+        //send a POST request tot he server to add the book
         axios.post("http://localhost:4000/api/books",book)
         .then()
         .catch();

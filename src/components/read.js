@@ -9,6 +9,7 @@ function Read() {
 
     useEffect(
         () => {
+            //fetch data from the server
             axios.get("http://localhost:4000/api/books")
                 .then(
                     (response) => {
