@@ -4,6 +4,7 @@ import axios from "axios";
 
 function Read() {
 
+    // Initialize a state variable to hold the data
     const [data, setData] = useState([]);
 
     useEffect(
@@ -16,10 +17,11 @@ function Read() {
                 )
                 .catch(
                     (error) => {
-                        console.log(error);
+                        // Log any errors that occur during the fetch
+                        console.log(error); 
                     }
                 )
-        }, []
+        }, [] // The empty dependency array ensures this effect runs only once when the component mounts
     );
 
     return (
