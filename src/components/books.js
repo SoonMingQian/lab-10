@@ -6,7 +6,7 @@ function Books(props){
     return props.myBooks.map(
         (book)=>{
             //render a BookItem component and pass the book data as the myBook prop
-            return <BookItem myBook={book}></BookItem>
+            return <BookItem myBook={book} key={book._id}></BookItem>
         }
     );
 }
