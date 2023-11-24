@@ -4,12 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Header from './components/header';
-import Footer from './components/footer';
 import Content from './components/content';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Create from './components/create';
 import Read from './components/read';
+import Edit from './components/edit';
 
 function App() {
   return (
@@ -31,6 +30,7 @@ function App() {
           <Route path="create" element={<Create></Create>}></Route>
           <Route path="/" element={<Content></Content>}></Route>
           <Route path="read" element={<Read></Read>}></Route>
+          <Route path='/edit/:id' element={<Edit></Edit>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
