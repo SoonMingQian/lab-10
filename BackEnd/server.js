@@ -28,22 +28,28 @@ async function main() {
     // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 
+//Define a schema for the books collection
 const bookSchema = new mongoose.Schema({
     title:String,
     cover:String,
     author:String
 })
 
+//create a model based on the schema
 const bookModel = mongoose.model('books', bookSchema);
 
+//Handle PUT requests to update a book by ID
 app.put('/api/books/:id', async(req, res)=>{
     console.log("Update: " + req.params.id);
+    //Find the book by ID and update it with the request body
     let book = await bookModel.findByIdAndUpdate(req.params.id, req.body, {new:true});
     res.send(book);
 })
 
+//Handle POST requests to create a new book
 app.post('/api/books', (req, res) => {
     console.log(req.body);
+    //Create a new book using the model and request body
     bookModel.create({
         title:req.body.title,
         cover:req.body.cover,

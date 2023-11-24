@@ -30,17 +30,23 @@ export default function Edit(props) {
                 console.log(error);
             })
     }, []);
+
+    //handle form submission
     const handleSubmit = (event) => {
         event.preventDefault();
+        //create a new book object with updated information
         const newBook = {
             id: id,
             title: title,
             cover: cover,
             author: author
         };
+
+        //make a PUT request to update the book
         axios.put('http://localhost:4000/api/books/' + id, newBook)
             .then((res) => {
                 console.log(res.data);
+                //navigate to the 'read' page after successful edit
                 navigate('/read');
             });
     }
